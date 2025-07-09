@@ -101,20 +101,25 @@ if mode == "📁 Upload File":
         except Exception as e:
             st.error(f"❌ Error processing file: {e}")
 
+
+
+
+
+
 # -------------------- MANUAL INPUT MODE --------------------
 elif mode == "🎛️ Manual Input":
     st.subheader("Enter Customer Info Manually")
 
     user_input = {
-        'Age': st.slider("Age", 18, 100, 35),
-        'Income': st.slider("Income", 1730, 666666, 52247, step=1000),
+        'Age': st.slider("Age", 60, 100, 35),
+        'Income': st.slider("Income", 0, 100000, 71613, step=100),
         'Total_Children': st.slider("Total Children", 0, 10, 2),
-        'Total_Spend': st.slider("Total Spend", 0, 100000, 5000, step=500),
-        'Avg_Annual_Spend': st.slider("Avg Annual Spend", 0, 50000, 3000, step=500),
-        'Recency': st.slider("Recency (days since last purchase)", 0, 99, 49),
-        'NumWebPurchases': st.slider("Web Purchases", 0, 27, 4),
-        'NumCatalogPurchases': st.slider("Catalog Purchases", 0, 28, 2),
-        'NumStorePurchases': st.slider("Store Purchases", 0, 13, 5),
+        'Total_Spend': st.slider("Total Spend", 0, 100000, 716, step=500),
+        'Avg_Annual_Spend': st.slider("Avg Annual Spend", 0, 100000, 60, step=500),
+        'Recency': st.slider("Recency (days since last purchase)", 0, 99, 26),
+        'NumWebPurchases': st.slider("Web Purchases", 0, 50, 8),
+        'NumCatalogPurchases': st.slider("Catalog Purchases", 0, 30, 2),
+        'NumStorePurchases': st.slider("Store Purchases", 0, 30, 10),
     }
 
     if st.button("🔍 Predict Cluster"):
