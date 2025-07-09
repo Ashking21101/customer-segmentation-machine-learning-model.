@@ -1,0 +1,7 @@
+scikit-learn
+pandas
+numpy
+streamlit
+seaborn
+matplotlib
+openpyxl  # needed for reading Excel files
